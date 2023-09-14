@@ -1,0 +1,12 @@
+services:
+  zomboid_server:
+    container_name: zomboid_server
+    build: .
+    env_file:
+      - .env
+    image: zomboid_server_image
+    volumes:
+      - ./workshop:/opt/zomboid_app/steamapps
+      - ./data:/opt/zomboid_data
+    ports:
+      - "16261-16262:16261-16262/udp"
