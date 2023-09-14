@@ -25,6 +25,7 @@ RUN set -x \
 
 COPY --chown=${USER}:${USER} scripts /opt/zomboid_scripts
 
-EXPOSE 16261-16262/udp
+EXPOSE 16261/udp
+EXPOSE 16262/udp
 
 ENTRYPOINT [ "/opt/zomboid_scripts/entry.sh" ]

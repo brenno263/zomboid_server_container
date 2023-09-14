@@ -9,4 +9,5 @@ services:
       - ./workshop:/opt/zomboid_app/steamapps
       - ./data:/opt/zomboid_data
     ports:
-      - "16261-16262:16261-16262/udp"
+      - "16261:16261/udp"
+      - "16262:16262/udp"
