@@ -2,6 +2,8 @@ services:
   zomboid_server:
     container_name: zomboid_server
     build: .
+    stdin_open: true
+    tty: true
     env_file:
       - .env
     image: zomboid_server_image
